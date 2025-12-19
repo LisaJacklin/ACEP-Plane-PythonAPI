@@ -1,0 +1,17 @@
+# config.yaml
+
+# Plane API Basic Configuration
+domain: "https://projects.camio.acep.uaf.edu"
+api_version: "v1"
+
+# Workspace and Project specifics
+workspace_slug: "cyberinfrustructure"
+project_id: "RTI"
+#ACEP-IT project board
+
+# Note project ID can be found with the AllProjects.py
+# as it is not the same as the Project ID labeled within the general
+# settings within plane... This is the identifier
+
+# Credential file reference
+cred_filename: "plane.cred"
