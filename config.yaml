@@ -1,0 +1,26 @@
+# Plane API Basic Configuration
+domain: "https://projects.camio.acep.uaf.edu"
+api_version: "v1"
+workspace_slug: " "
+cred_filename: " "
+
+# Full Plane Report
+reporting:
+  start_date: ""
+  end_date: ""
+
+# todo: Include output types/locations...
+
+# Project Based Report
+project_id: ""
+
+# Task Status Configuration
+task_status:
+  - "Done"
+  - "Ready for Review"
+  - "Pending"
+  - "Completed"
+  - "Cancelled"
+  - "Blocked"
+  - "Backlog"
+  - "Todo"
