@@ -1,1 +1,6 @@
-*.cred 
+*.cred
+.txt
+.csv
+sample-config.yaml
+__pycache__/*
+.vscode
