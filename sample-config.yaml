@@ -1,17 +1,25 @@
-# config.yaml
-
 # Plane API Basic Configuration
 domain: "https://projects.camio.acep.uaf.edu"
 api_version: "v1"
-
-# Workspace and Project specifics
-workspace_slug: "cyberinfrustructure"
-project_id: "RTI"
-#ACEP-IT project board
-
-# Note project ID can be found with the AllProjects.py
-# as it is not the same as the Project ID labeled within the general
-# settings within plane... This is the identifier
-
-# Credential file reference
+workspace_slug: "cyberinfrastructure"
 cred_filename: "plane.cred"
+
+# Full Plane Report
+start_date: "2025-10-01"
+end_date: "2025-12-22"
+
+# todo: Include output types/locations...
+
+# Project Based Report
+project_id: ""
+
+# Task Status Configuration
+task_status:
+  - "Done"
+  - "Ready for Review"
+  - "Pending"
+  - "Completed"
+  - "Cancelled"
+  - "Blocked"
+  - "Backlog"
+  - "Todo"

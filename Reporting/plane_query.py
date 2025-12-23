@@ -40,9 +40,10 @@ class PlaneClient:
 
     # parse dates from config file
     def _parse_dates(self):
-        r_cfg = self.config.get('reporting', {})
-        start_str = r_cfg.get('start_date')
-        end_str = r_cfg.get('end_date')
+        #adjusted the config file to be simpler to process: no reporting setup
+        start_str = self.config.get('start_date')
+        end_str = self.config.get('end_date')
+
 
         if not start_str: start = datetime.now(timezone.utc) - timedelta(days=30)
         else: start = parser.parse(str(start_str)).replace(tzinfo=timezone.utc)
