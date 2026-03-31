@@ -17,17 +17,17 @@ from Reporting.report_render import ReportRenderer
 # Adjusting bulk of main to be a function
 # note that calls for libraries now required.
 def main():
-    print(f"--- GENERATING CUSTOM GRID REPORT ---")
+    print(f"--- GENERATING MARKDOWN REPORT ---")
 
     # pull information from client side
     client = PlaneClient("sample-config.yaml")
 
     # still using txt and csv outputs for the moment...
-    out_txt = client.config.get('outputs', {}).get('text_file', 'report.txt')
+    out_md = client.config.get('outputs', {}).get('md_file', 'report.md')
     out_csv = client.config.get('outputs', {}).get('csv_file', 'report.csv')
 
     # pull in the render for report savings and setup
-    renderer = ReportRenderer(out_txt, out_csv)
+    renderer = ReportRenderer(out_md, out_csv)
 
     #now user data; get_user_details swapped for client.get_user()
     my_id, my_name = client.get_user()
