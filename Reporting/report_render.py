@@ -27,7 +27,7 @@ class ReportRenderer:
             task_list = d.get('all_tasks_list', [])
             if task_list:
                 format_tasks = [str(t).replace('|', '&#124;').replace('\n', ' ') for t in task_list]
-                tasks_formatted = " ".join([f" {t}" for t in task_list])
+                tasks_formatted = "<br>".join([f" {t}" for t in task_list])
             else:
                 tasks_formatted = "None"
 
