@@ -4,8 +4,13 @@ from datetime import datetime
 
 class ReportRenderer:
     def __init__(self, output_md="report.md", output_csv="report.csv"):
-        self.output_md = output_md
-        self.output_csv = output_csv
+        date_str = datetime.now().strftime('%Y-%m-%d')
+
+        date_output_md = output_md.replace(".md", f"_{date_str}.md")
+        date_output_csv = output_csv.replace(".csv", f"_{date_str}.csv")
+
+        self.output_md = f"reports/{date_output_md}"
+        self.output_csv = f"reports/{date_output_csv}"
 
     #rather than building a grid, adjust to create a markdown table
     def generate_md_table(self, data):
